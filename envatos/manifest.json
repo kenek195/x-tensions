@@ -1,27 +1,26 @@
 {
-	"applications": {
-		"gecko": {
-			"id": "envatos@mozilla.org",
-			"strict_min_version": "42.0"
-		}
-	},
-	"manifest_version": 2,
-	"name": "Envatos",
-	"description": "An extension from kenek's X-projects",
-	"version": "1.0",
-	"homepage_url": "http://kenek.xyz",
-	"icons": {
-		"48": "icons/icon-48.png",
-		"96": "icons/icon-96.png"
-	},
-	"content_scripts": [
-		{
-			"matches": [
-				"*://*.themeforest.net/item/education-wordpress-theme-education-wp/14058034/*"
-			],
-			"js": [
-				"assets/index.js"
-			]
-		}
-	]
+  "manifest_version": 2,
+  "name": "Envatos",
+  "description": "An extension from kenek's X-projects",
+  "version": "1.0",
+  "homepage_url": "http://kenek.xyz",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "src/assets/index.js"
+      ]
+    }
+  ],
+  "options_page": "src/options.html",
+  "permissions": [
+    "storage"
+  ]
 }
